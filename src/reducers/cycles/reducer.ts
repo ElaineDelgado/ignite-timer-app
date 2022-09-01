@@ -23,7 +23,7 @@ export const cyclesReducer = (state: CycleState, action:any) => {
           draft.activeCycleId = action.payload.newCycle.id
         })
 
-        case ActionTypes.INTERRUPT_CURRENT_CYCLE: {
+        case ActionTypes.INTERRUPT_CURRENT_CYCLE: {        
           const currentCycleIndex = state.cycles.findIndex(cycle => {
             return cycle.id === state.activeCycleId
           })
@@ -51,6 +51,5 @@ export const cyclesReducer = (state: CycleState, action:any) => {
         
         default: 
           return state
-
     }    
   }
